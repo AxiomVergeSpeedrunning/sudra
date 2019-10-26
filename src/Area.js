@@ -5,6 +5,7 @@ class Area {
       height: 1,
       color: '#b200ff',
       rooms: [],
+      name: 'Somebody forgot a name',
       ...input,
     };
 
@@ -20,7 +21,9 @@ class Area {
 
     // Assign the grid structure
     for (const room of rooms) {
-      this.rooms[room.x][room.y] = room;
+      const [x, y] = room.position;
+
+      this.rooms[x][y] = room;
     }
   }
 }

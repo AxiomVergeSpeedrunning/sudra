@@ -1,5 +1,5 @@
 import RoomTypes from './enums';
-import expandArray from './utils';
+import { expandArray, mkArr } from './utils';
 
 class Room {
   constructor(input) {
@@ -15,8 +15,16 @@ class Room {
 
     const { walls, doors, ...rest } = options;
 
-    this.walls = expandArray(walls);
-    this.doors = expandArray(doors);
+    const constructList = item => {
+      if (typeof item === 'string' || item instanceof String) {
+        return mkArr(item);
+      }
+
+      return expandArray(item);
+    };
+
+    this.walls = constructList(walls);
+    this.doors = constructList(doors);
 
     for (const [key, val] of Object.entries(rest)) {
       this[key] = val;

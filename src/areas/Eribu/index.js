@@ -6,6 +6,7 @@ const Eribu = new Area({
   height: 17,
   color: '#a71367',
   rooms: rooms,
+  name: 'Eribu',
 });
 
 export default Eribu;

@@ -13,8 +13,14 @@ const expandArray = arr => {
     case 3:
       return [...arr, arr[1]];
     default:
-      return arr;
+      return [...arr];
   }
 };
 
-export default { expandArray, friendlyName };
+const mkArr = str => {
+  const t = str.toLowerCase();
+
+  return [t.includes('n'), t.includes('e'), t.includes('s'), t.includes('w')];
+};
+
+export { expandArray, friendlyName, mkArr };
