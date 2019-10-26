@@ -6,5 +6,23 @@
   "repository": "https://github.com/axiom-verge-speedrunning/sudra",
   "author": "Mark Rawls",
   "license": "WTFPL",
-  "private": false
+  "private": false,
+  "scripts": {
+    "start": "babel-node src/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "husky": "^3.0.9",
+    "nodemon": "^1.19.4",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^2.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }
