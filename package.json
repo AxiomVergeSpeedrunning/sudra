@@ -1,0 +1,10 @@
+{
+  "name": "sudra",
+  "version": "1.0.0",
+  "description": "A complete map of Axiom Verge",
+  "main": "dist/index.js",
+  "repository": "https://github.com/axiom-verge-speedrunning/sudra",
+  "author": "Mark Rawls",
+  "license": "WTFPL",
+  "private": false
+}
